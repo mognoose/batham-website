@@ -87,6 +87,24 @@ nav {
       color: #d9ae03;
     }
   }
+
+}
+@media only screen and (max-width: 650px) {
+  nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 25rem;
+
+    :nth-child(1) {
+      grid-column-start: 1;
+      justify-self: center;
+    }
+    :nth-child(2) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      justify-self: center;
+    }
+  }
 }
 
 a {
