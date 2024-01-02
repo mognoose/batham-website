@@ -1,8 +1,4 @@
 <template>
-  <div class="hero">
-    <img alt="Hero" src="../assets/batham-claymortar-header.png" />
-    <div class="overlay" />
-  </div>
   <Content />
 </template>
 

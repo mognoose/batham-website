@@ -1,4 +1,11 @@
 <template>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="body">
+    <a class="cta-btn" href="https://www.instagram.com/batham.band" target="_blank">
+      <img class="logo" alt="Hero" src="./../assets/insta.png" style="width: 50px" />
+      <p>instagram.com/batham.band</p>
+    </a>
+  </div>
   <div class="body">
     <h1>{{ content.fields?.title }}</h1>
   </div>
@@ -58,5 +65,43 @@ export default {
   text-align: left;
   max-width: 52rem;
   margin: 0 auto;
+}
+.cta-btn {
+  margin: 2rem;
+  border: 2px solid #d9ae03;
+  background-color: #996600;
+  color: #000;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  width: fit-content;
+  margin: 0 auto;
+  justify-items: center;
+
+  * {
+    margin: auto;
+    justify-self: center;
+  }
+}
+
+.cta-btn:hover {
+  border: 2px solid #996600;
+  background-color: #000;
+  color: #996600;
+  box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
+
+}
+
+iframe {
+  border: 2px solid #996600;
+  padding: 1rem;
+  box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
+}
+
+iframe:hover {
+  border: 2px solid #996600;
+  padding: 1rem;
+  box-shadow: 0px 0px 13px rgba(217, 174, 3, 1);
 }
 </style>
