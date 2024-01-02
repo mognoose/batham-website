@@ -2,13 +2,28 @@
   <nav>
     <div>
       <router-link to="/">
-        <img class="logo" alt="Hero" src="./assets/batham-logo.png" />
+        <img ref="logo" :class="{'goNuts': goNuts}" class="logo" alt="Hero" src="./assets/batham-logo.png" @click="onGoNuts()"/>
       </router-link>
     </div>
     <h1 class="logotype">Batham</h1>
   </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      goNuts: false,
+    }
+  },
+  methods: {
+    onGoNuts() {
+      this.goNuts = !this.goNuts
+    }
+  },
+}
+</script>
 
 <style lang="scss">
 @font-face {
@@ -110,5 +125,68 @@ nav {
 a {
   font-weight: bold;
   color: #d9ae03;
+}
+
+.goNuts {
+  position: absolute;
+  bottom: 24px;
+  left: 17px;
+  animation-name: goNuts;
+  animation-duration: 1700ms;
+}
+
+@keyframes goNuts {
+  0% {
+    bottom: 24px;
+    left: 17px;
+    transform: rotate(0deg);
+  }
+  20% {
+    bottom: -180px;
+    left: 250px;
+    transform: rotate(-90deg);
+
+  }
+  30% {
+    bottom: -450px;
+    left: 50px;
+    transform: rotate(-40deg);
+  }
+  40% {
+    bottom: 300px;
+    left: -10px;
+    transform: rotate(60deg);
+  }
+  50% {
+    bottom: -300px;
+    left: 10px;
+    transform: rotate(120deg);
+  }
+  60% {
+    bottom: -200px;
+    left: -150px;
+    transform: rotate(10deg);
+  }
+  70% {
+    bottom: 100px;
+    left: -300px;
+    transform: rotate(70deg);
+  }
+  80% {
+    bottom: 170px;
+    left: -380px;
+    transform: rotate(180deg);
+  }
+  90% {
+    bottom: -600px;
+    left: 300px;
+    transform: rotate(67deg);
+  }
+  100% {
+    bottom: 24px;
+    left: 17px;
+    transform: rotate(0deg);
+  }
+
 }
 </style>

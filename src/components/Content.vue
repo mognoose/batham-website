@@ -58,16 +58,47 @@ export default {
 </script>
 
 <style lang="scss">
+#app {
+  box-sizing: border-box;
+  width: 100vw;
+  width: 100dvw;
+  margin: 0;
+  padding: 0;
+}
 .body {
+  box-sizing: border-box;
   white-space: pre-line;
   font-size: 1.2rem;
   padding: 1em;
   text-align: left;
-  max-width: 52rem;
+  width: 52rem;
   margin: 0 auto;
+  max-width: 100vw;
+  max-width: 100dvw;
+  
 }
+
+iframe {
+  max-width: calc(100vw - 4rem);
+  max-width: calc(100dvw - 4rem);
+  margin: 0 auto;
+  border: 2px solid #996600;
+  padding: 1rem;
+  box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
+  transition-duration: 250ms;
+}
+
+iframe:hover {
+  border: 2px solid #996600;
+  padding: 1rem;
+  box-shadow: 0px 0px 13px rgba(217, 174, 3, 1);
+}
+
 .cta-btn {
-  margin: 2rem;
+  box-sizing: border-box;
+  max-width: 100vw;
+  max-width: 100dvw;
+  margin: 2rem auto;
   border: 2px solid #d9ae03;
   background-color: #996600;
   color: #000;
@@ -78,6 +109,8 @@ export default {
   width: fit-content;
   margin: 0 auto;
   justify-items: center;
+  transition-duration: 250ms;
+
 
   * {
     margin: auto;
@@ -86,6 +119,7 @@ export default {
 }
 
 .cta-btn:hover {
+  box-sizing: border-box;
   border: 2px solid #996600;
   background-color: #000;
   color: #996600;
@@ -93,15 +127,4 @@ export default {
 
 }
 
-iframe {
-  border: 2px solid #996600;
-  padding: 1rem;
-  box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
-}
-
-iframe:hover {
-  border: 2px solid #996600;
-  padding: 1rem;
-  box-shadow: 0px 0px 13px rgba(217, 174, 3, 1);
-}
 </style>
