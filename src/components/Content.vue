@@ -62,6 +62,10 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  overflow-x: hidden;
+}
+
 #app {
   box-sizing: border-box;
   width: 100vw;
