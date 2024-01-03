@@ -5,6 +5,10 @@
       <img class="logo" alt="Hero" src="./../assets/insta.png" style="width: 50px" />
       <p>instagram.com/batham.band</p>
     </a>
+    <a class="cta-btn" href="https://batham.bandcamp.com" target="_blank">
+      <img class="logo" alt="Hero" src="./../assets/bandcamp.png" style="width: 50px" />
+      <p>batham.bandcamp.com</p>
+    </a>
   </div>
   <div class="body">
     <h1>{{ content.fields?.title }}</h1>
@@ -110,7 +114,7 @@ iframe:hover {
   margin: 0 auto;
   justify-items: center;
   transition-duration: 250ms;
-
+  margin-top: 1rem;
 
   * {
     margin: auto;
