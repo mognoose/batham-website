@@ -1,14 +1,16 @@
 <template>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   <div class="body">
-    <a class="cta-btn" href="https://www.instagram.com/batham.band" target="_blank">
-      <img class="logo" alt="Hero" src="./../assets/insta.png" style="width: 50px" />
-      <p>instagram.com/batham.band</p>
-    </a>
-    <a class="cta-btn" href="https://batham.bandcamp.com" target="_blank">
-      <img class="logo" alt="Hero" src="./../assets/bandcamp.png" style="width: 50px" />
-      <p>batham.bandcamp.com</p>
-    </a>
+    <div class="cta-btn">
+      <a class="some-btn" href="https://www.instagram.com/batham.band" target="_blank">
+        <img class="logo" alt="Hero" src="./../assets/insta.png" style="width: 3rem" />
+        <p>instagram.com/batham.band</p>
+      </a>
+      <a class="some-btn" href="https://batham.bandcamp.com" target="_blank">
+        <img class="logo" alt="Hero" src="./../assets/bandcamp.png" style="width: 3rem" />
+        <p>batham.bandcamp.com</p>
+      </a>
+    </div>
   </div>
   <div class="body">
     <h1>{{ content.fields?.title }}</h1>
@@ -106,27 +108,48 @@ iframe:hover {
   box-sizing: border-box;
   max-width: 100vw;
   max-width: 100dvw;
-  margin: 2rem auto;
   border: 2px solid #d9ae03;
   background-color: #996600;
-  color: #000;
   padding: 1rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  width: fit-content;
-  margin: 0 auto;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr;
   transition-duration: 250ms;
   margin-top: 1rem;
+  width: auto;
 
   * {
     margin: auto;
-    justify-self: center;
+  }
+
+  .some-btn {
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+    border-radius: 3rem;
+    transition: width 500ms ease;
+    background-color: #000;
+    color: rgba(217, 174, 3, 1);
+    border: 2px solid #d9ae03;
+
+    display: grid;
+    grid-template-columns: 3rem 1fr auto;
+
+    img {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+    }
+  }
+  .some-btn:hover {
+    width: 100%;
   }
 }
 
-.cta-btn:hover {
+.cta-btn-hover:hover {
   box-sizing: border-box;
   border: 2px solid #996600;
   background-color: #000;
