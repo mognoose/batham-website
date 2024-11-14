@@ -1,5 +1,13 @@
 <template>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  />
   <div class="body">
     <div class="cta-btn">
       <a class="some-btn" href="https://www.instagram.com/batham.band" target="_blank">
