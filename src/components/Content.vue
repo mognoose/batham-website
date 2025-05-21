@@ -1,25 +1,8 @@
 <template>
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4"
-    title="YouTube video player"
-    frameborder="0"
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yBmYnw4j1-k?si=r6X5zwCjeusmdoO4"
+    title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-  />
-  <div class="body">
-    <div class="cta-btn">
-      <a class="some-btn" href="https://www.instagram.com/batham.band" target="_blank">
-        <img class="logo" alt="Hero" src="./../assets/insta.png" style="width: 3rem" />
-        <p>instagram.com/batham.band</p>
-      </a>
-      <a class="some-btn" href="https://batham.bandcamp.com" target="_blank">
-        <img class="logo" alt="Hero" src="./../assets/bandcamp.png" style="width: 3rem" />
-        <p>batham.bandcamp.com</p>
-      </a>
-    </div>
-  </div>
+    allowfullscreen />
   <div class="body">
     <h1>{{ content.fields?.title }}</h1>
   </div>
@@ -39,7 +22,7 @@ export default {
       content: {},
     };
   },
-  mounted () {
+  mounted() {
     this.fetchContent();
   },
   methods: {
@@ -83,6 +66,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .body {
   box-sizing: border-box;
   white-space: pre-line;
@@ -93,31 +77,23 @@ body {
   margin: 0 auto;
   max-width: 100vw;
   max-width: 100dvw;
-  
+
 }
 
 iframe {
   max-width: calc(100vw - 4rem);
   max-width: calc(100dvw - 4rem);
   margin: 0 auto;
-  border: 2px solid #996600;
   padding: 1rem;
-  box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
   transition-duration: 250ms;
-}
-
-iframe:hover {
-  border: 2px solid #996600;
-  padding: 1rem;
-  box-shadow: 0px 0px 13px rgba(217, 174, 3, 1);
 }
 
 .cta-btn {
   box-sizing: border-box;
   max-width: 100vw;
   max-width: 100dvw;
-  border: 2px solid #d9ae03;
-  background-color: #996600;
+  // border: 2px solid #d9ae03;
+  background-color: #000;
   padding: 1rem;
   border-radius: 1rem;
   display: grid;
@@ -149,9 +125,6 @@ iframe:hover {
       padding: 0;
     }
 
-    p {
-    }
-  }
   .some-btn:hover {
     width: 100%;
   }
@@ -165,5 +138,4 @@ iframe:hover {
   box-shadow: 0px 0px 7px rgba(217, 174, 3, 1);
 
 }
-
 </style>
