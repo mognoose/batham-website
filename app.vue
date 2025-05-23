@@ -1,15 +1,14 @@
 <template>
   <NuxtRouteAnnouncer />
   <MainNavigation />
-  <section class="body" v-for="section in content.fields?.content" :key="section.title">
-    <HeroBlock v-if="computedType(section.fields.type) === 'Video'" :content="section.fields" />
+  <section v-for="section in content.fields?.content" :key="section.title" class="body">
+    <HeroBlock v-if="computedType(section.fields.type) === 'Hero'" :content="section.fields" />
     <TextBlock v-if="computedType(section.fields.type) === 'Rich Text'" :content="section.fields" />
-    <!-- <VideoBlock v-if="computedType(section.fields.type) === 'Video'" :content="section.fields" /> -->
+    <VideoBlock v-if="computedType(section.fields.type) === 'Video'" :content="section.fields" />
   </section>
 </template>
 
 <script setup>
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { createClient } from "contentful";
 
 const content = ref([]);

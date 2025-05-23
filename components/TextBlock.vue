@@ -1,12 +1,13 @@
 <template>
     <h1>{{ content.title }}</h1>
+    <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="text" v-html="richTextFormat(content.body)" />
 </template>
 
 <script setup>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
-const props = defineProps({
+defineProps({
     content: {
         type: Object,
         required: true,

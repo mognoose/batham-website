@@ -4,22 +4,35 @@
             <img ref="logo" class="logo" alt="Hero" src="../assets/batham-logo.png">
         </router-link>
         <div class="some-links">
-            <a href="https://youtu.be/yBmYnw4j1-k" class="some-btn">
-                <Icon name="uil:youtube" style="color: white" size="2rem" />
-                <p>youtube.com/@Bathamband</p>
+            <a v-for="(link, index) in someLinks" :key="index" :href="link.url" class="some-btn">
+                <Icon :name="link.icon" style="color: white" size="2rem" />
+                <p>{{ link.label }}</p>
             </a>
-            <a class="some-btn" href="https://www.instagram.com/batham.band" target="_blank">
-                <Icon name="uil:instagram" style="color: white" size="2rem" />
-                <p>instagram.com/batham.band</p>
-            </a>
-            <a class="some-btn" href="https://batham.bandcamp.com" target="_blank">
-                <Icon name="cib:bandcamp" style="color: white" size="2rem" />
-                <p>batham.bandcamp.com</p>
-            </a>
-
         </div>
     </nav>
 </template>
+
+<script setup>
+
+const someLinks = [
+    {
+        icon: 'uil:youtube',
+        url: 'https://youtu.be/yBmYnw4j1-k',
+        label: 'youtube.com/@Bathamband',
+    },
+    {
+        icon: 'uil:instagram',
+        url: 'https://www.instagram.com/batham.band',
+        label: 'instagram.com/batham.band',
+    },
+    {
+        icon: 'cib:bandcamp',
+        url: 'https://batham.bandcamp.com',
+        label: 'batham.bandcamp.com',
+    },
+]
+
+</script>
 
 <style lang="scss" scoped>
 nav {

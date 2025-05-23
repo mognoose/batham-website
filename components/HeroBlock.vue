@@ -8,7 +8,7 @@
 <script setup>
 console.log('hero');
 
-const props = defineProps({
+defineProps({
     content: {
         type: Object,
         required: true,
