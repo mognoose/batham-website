@@ -1,18 +1,14 @@
 <template>
     <a
         v-if="content?.body?.content[0].data?.target?.metadata?.tags[0].sys.id === 'promo'"
-        v-for="(node, index) in content"
         :href="content?.body?.content[0].data.target.fields.file.url"
-        :key="`promo-${index}`"
         class="promo"
-        v-html="richTextFormat(node)"
+        v-html="richTextFormat(content.body)"
     />
     <div
         v-else
-        v-for="(node, index) in content"
-        :key="`logo-${index}`"
         class="hero"
-        v-html="richTextFormat(node)"
+        v-html="richTextFormat(content.body)"
     />
 </template>
 

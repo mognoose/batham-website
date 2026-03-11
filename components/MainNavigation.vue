@@ -1,8 +1,8 @@
 <template>
     <nav>
-        <router-link to="/">
+        <a href="/">
             <img ref="logo" class="logo" alt="Hero" src="../assets/batham-logo.png">
-        </router-link>
+        </a>
         <div class="some-links">
             <a v-for="(link, index) in someLinks" :key="index" :href="link.url" class="some-btn">
                 <Icon :name="link.icon" style="color: white" size="2rem" />
@@ -69,10 +69,6 @@ nav {
         margin: 0 .5rem;
         font-weight: bold;
         color: #d9ae03;
-
-        &.router-link-exact-active {
-            color: #d9ae03;
-        }
     }
 
     .some-links {
@@ -101,10 +97,16 @@ nav {
 
             display: grid;
             grid-template-columns: 3rem 1fr auto;
+            align-items: center;
 
             img {
                 margin: -.5rem;
                 padding: 0;
+            }
+
+            p {
+                margin: 0;
+                white-space: nowrap;
             }
 
             .iconify {
@@ -115,7 +117,7 @@ nav {
 
         .some-btn:hover {
             @media only screen and (min-width: 650px) {
-                width: 16rem;
+                width: 18rem;
                 padding-right: 3rem;
             }
 
